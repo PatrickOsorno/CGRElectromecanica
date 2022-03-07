@@ -28,3 +28,6 @@ body{
     min-width: 720px;
     min-height: 1080px;
 }
+.fondopie{
+    background-color: rgba(0, 0, 0, 0.2);
+}
