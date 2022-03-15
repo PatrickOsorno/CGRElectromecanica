@@ -79,22 +79,22 @@
         <form action="">
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
           </div>
 
           <div class="mb-3">
             <label for="name" class="form-label">Nombre completo</label>
-            <input type="email" class="form-control" id="name" placeholder="Digite su nombre completo">
+            <input type="text" class="form-control" id="name" placeholder="Digite su nombre completo"required>
           </div>
 
           <div class="mb-3">
             <label for="date" class="form-label">Fecha de nacimiento</label>
-            <input type="date" class="form-control" id="date">
+            <input type="date" class="form-control" id="date" required>
           </div>
 
           <div class="mb-3">
             <label for="genero" class="form-label">Género</label>
-            <select class="form-select" id="genero">
+            <select class="form-select" id="genero" required> 
               <option>Masculino</option>
               <option>Femenino</option>
               <option>No especifica</option>
@@ -103,7 +103,7 @@
 
           <div class="mb-3">
             <label for="gradoAcad" class="form-label mt-4">Grado académico</label>
-            <select multiple="" class="form-select" id="gradoAcad">
+            <select multiple="" class="form-select" id="gradoAcad" required>
               <option>Primaria incompleta</option>
               <option>Primaria completa</option>
               <option>Secundaria incompleta</option>
@@ -114,8 +114,9 @@
           </div>
 
           <div class="mb-3 text-center">
-            <button type="submit" class="btn btn-primary ">Solicitar información</button>
+            <button id="boton" type="submit" class="btn btn-primary ">Solicitar información</button>
           </div>
+
         </form>
       </div>
     </div>
