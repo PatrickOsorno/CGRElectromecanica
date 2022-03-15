@@ -11,6 +11,7 @@
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/icons.js"></script>
   <link href="css/fuente.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -76,25 +77,27 @@
 
       <div class="col-sm-7 col-md-7 col-lg-7">
         <h3 class="text-center">Más información</h3>
-        <form action="">
+        <form id="formulario" action="">
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+            <input type="email" class="form-control" id="email" name="correo" placeholder="nombre@ejemplo.com" >
+            <p class="inputError" id="mensajeCorreo">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
           </div>
 
           <div class="mb-3">
             <label for="name" class="form-label">Nombre completo</label>
-            <input type="text" class="form-control" id="name" placeholder="Digite su nombre completo"required>
+            <input type="text" class="form-control" id="name" name="nombre" placeholder="Escriba su nombre completo" >
+            <p class="inputError" id="mensajeNombre">El correo solo puede contener letras y espacios.</p>
           </div>
 
           <div class="mb-3">
-            <label for="date" class="form-label">Fecha de nacimiento</label>
-            <input type="date" class="form-control" id="date" required>
+            <label for="fecha" class="form-label">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="fecha" >
           </div>
 
           <div class="mb-3">
             <label for="genero" class="form-label">Género</label>
-            <select class="form-select" id="genero" required> 
+            <select class="form-select" id="genero" > 
               <option>Masculino</option>
               <option>Femenino</option>
               <option>No especifica</option>
@@ -103,7 +106,7 @@
 
           <div class="mb-3">
             <label for="gradoAcad" class="form-label mt-4">Grado académico</label>
-            <select multiple="" class="form-select" id="gradoAcad" required>
+            <select multiple="" class="form-select" id="gradoAcad">
               <option>Primaria incompleta</option>
               <option>Primaria completa</option>
               <option>Secundaria incompleta</option>
@@ -114,9 +117,9 @@
           </div>
 
           <div class="mb-3 text-center">
-            <button id="boton" type="submit" class="btn btn-primary ">Solicitar información</button>
+            <button type="submit" class="btn btn-primary ">Solicitar información</button>
+            <script src="js/validaciones.js"></script>
           </div>
-
         </form>
       </div>
     </div>
