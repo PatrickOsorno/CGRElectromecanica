@@ -73,6 +73,7 @@ body{
 
 aside{
     padding-top: 1%;
+    border-right: 2px #2c3e50 solid;
 }
 
 .justificarTexto{
