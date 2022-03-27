@@ -1,4 +1,4 @@
-var coord = { lat: 10.141323, lng: -84.194666 }, directionsRenderer, directionsService;
+var coord = { lat: 10.132105, lng: -84.196897 }, directionsRenderer, directionsService;
 function initMap() {
   directionsRenderer = new google.maps.DirectionsRenderer();
   directionsService = new google.maps.DirectionsService();
