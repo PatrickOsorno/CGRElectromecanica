@@ -34,6 +34,10 @@ $(function() {
     document.getElementById("primero").addEventListener("click", () => {
         $(".pintura, .pinturaImg").slideDown();
     });
+
+    document.getElementById("primero").addEventListener("mouseenter", () => {
+        $("#primero").css({'cursor':'pointer'})
+    });
 });
 
 $(function() {
@@ -44,6 +48,10 @@ $(function() {
     document.getElementById("segundo").addEventListener("click", () => {
         $(".pintura1, .pinturaImg1").slideDown();
     });
+
+    document.getElementById("segundo").addEventListener("mouseenter", () => {
+        $("#segundo").css({'cursor':'pointer'})
+    });
 });
 
 $(function () {
@@ -53,6 +61,10 @@ $(function () {
 
     document.getElementById("tercero").addEventListener("click", () => {
         $(".pintura2, .pinturaImg2").slideDown();
+    });
+
+    document.getElementById("tercero").addEventListener("mouseenter", () => {
+        $("#tercero").css({'cursor':'pointer'})
     });
 });
 
@@ -70,3 +82,4 @@ $(function(){
         });
     });
 });
+
