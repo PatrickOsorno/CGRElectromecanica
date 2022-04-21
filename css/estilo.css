@@ -1,59 +1,59 @@
-body{
+body {
     font-family: 'Quicksand', sans-serif;
     background: url(../img/fondo.jpg);
     font-size: 18px;
 }
 
-.encabezado{
+.encabezado {
     background-color: lightgray;
     margin-left: 1px;
     margin-right: 1px;
 }
 
-.encabezado div{
+.encabezado div {
     text-align: center;
 }
 
-.encabezado div img{
+.encabezado div img {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: solid #7B8A8B 1px;
 }
 
-.fondopie{
+.fondopie {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.principal{
+.principal {
     background-color: lightgray;
     margin-left: 1px;
     margin-right: 1px;
 }
 
-.imagen{
+.imagen {
     text-align: center;
-} 
+}
 
-.imagen img{
+.imagen img {
     width: 40%;
     height: 40%;
     border-radius: 5px;
     border: solid gray 2px;
 }
 
-.imagenC{
+.imagenC {
     text-align: center;
 }
 
-.imagenC img{
+.imagenC img {
     width: 70%;
     height: 40%;
     border-radius: 5px;
     border: solid gray 2px;
 }
 
-.infoservicios{
+.infoservicios {
     background-color: #2c3e50;
     color: white;
     height: 50px;
@@ -66,153 +66,161 @@ body{
 
 .infoservicios a {
     text-decoration: none;
-    
+
 }
 
-.inputError{
+.inputError {
     display: none;
 }
 
 #mapa {
-	height: 500px;
-	width: 100%;
+    height: 500px;
+    width: 100%;
 }
 
-.imgHome{
+.imgHome {
     text-align: center;
 }
 
-aside{
+aside {
     padding-top: 1%;
     border-right: 2px #2c3e50 solid;
 }
 
-.justificarTexto{
+.justificarTexto {
     text-align: justify;
 }
 
 
-.imgHome img{
+.imgHome img {
     width: 60%;
     border: solid gray 2px;
 }
 
-.galeria{
+.galeria {
     padding-top: 2%;
 }
 
-.fotos{
+.fotos {
     width: 70%;
     border-radius: 5px;
     margin: 0 auto;
 }
 
-.categoria{
+.categoria {
     margin-left: 0px;
     margin-top: 17px;
     background-color: rgb(184, 184, 184);
 
 }
 
-.categoria:hover{
+.categoria:hover {
     background-color: rgb(155, 155, 155);
 }
 
-.video{
+.video {
     width: 50%;
     margin: 0 auto;
     margin-bottom: 7px;
 }
 
 /* Tabla */
-table, th, tr{
+table,
+th,
+tr {
     color: #fff;
     border: 1px solid #fff;
     text-align: center;
     background-color: #2c3e504b;
 }
 
-table thead{
+table thead {
     color: #030303;
     background-color: #2c3e50c5;
 }
 
-.tabla{
-    width:50%;
+.tabla {
+    width: 50%;
     margin: 0 auto;
     margin-bottom: 10px;
 }
 
-.tituloTabla{
+.tituloTabla {
     color: red;
 }
 
-table tfoot th{
-    border: 0px;
+@media only screen and (max-width: 770px) {
+    .tabla {
+        width: 90%;
+    }
 }
 
-@media only screen and (max-width: 770px) {
-    .tabla{
-      width: 90%;
-    }
-  }
-
 /* vision, mision, valores */
-.part2{
+.part2 {
     background-color: #2c3e502c;
     margin-bottom: 10px;
 }
 
-.mision, .vision{
+.mision,
+.vision {
     border-right: solid 2px #fff;
-    
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .mision,
+    .vision {
+        border-right: none;
+        border-bottom: solid 2px #fff;
+    }
 }
 
 /* Informacion del dueño */
-.info{
+.info {
     background-color: #2c3e502c;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.info a{
+.info a {
     color: #fff;
 }
 
-.info a:hover{
+.info a:hover {
     color: rgb(233, 37, 37);
 }
 
 /* ligthbox */
 
-.ligthbox{
-	width: 100%;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	background: rgba(0,0,0,.8);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.ligthbox {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.ligthbox img{
+.ligthbox img {
     height: 85%;
 }
 
-.btn-close{
-	width: 50px;
-	height: 50px;
-	background: #AE4545;
-	border: 3px solid #fff;
-	border-radius: 100%;
-	color: #fff;
-	font-size: 30px;
-	font-weight: bold;
-	text-align: center;
-	padding-top: 12px;
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	cursor: pointer;
+.btn-close {
+    width: 50px;
+    height: 50px;
+    background: #AE4545;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 12px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
 }
