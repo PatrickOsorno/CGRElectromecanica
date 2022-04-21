@@ -15,5 +15,12 @@ $(".galery").click(function(e){
 	$(".btn-close").click(function(){
 		$(".ligthbox").remove();
 	})
-
 })
+
+$(".galery").mouseenter(function(){
+	$(".galery").css({'cursor':'zoom-in'})
+});
+
+// $(".#zoom_mw").mouseenter(function(){
+// 	$(".#zoom_mw").css({'cursor':'zoom-in'})
+// });
