@@ -20,7 +20,3 @@ $(".galery").click(function(e){
 $(".galery").mouseenter(function(){
 	$(".galery").css({'cursor':'zoom-in'})
 });
-
-// $(".#zoom_mw").mouseenter(function(){
-// 	$(".#zoom_mw").css({'cursor':'zoom-in'})
-// });
