@@ -1,6 +1,3 @@
-var formulario = document.getElementById('formulario'), 
-inputCorreo = document.getElementById('email'), 
-inputNombre = document.getElementById('name');
 var Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };
 
 var email, nombreCompleto, fechaNacimiento, genero, gradoAcad, edad;
@@ -10,9 +7,6 @@ const expresiones = {
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 };
 
-function validar(e) {
-
-}
 
 function calcularEdad(fechaNac) {
     let nacimiento = new Date(fechaNac), fechaActual = new Date(), edad;
@@ -39,11 +33,24 @@ function enviarFormulario(e){
     gradoAcad = document.getElementById('gradoAcad').value;
     edad = calcularEdad(document.getElementById("fecha").value);
 
+    let expNombre = /^[a-zA-ZÀ-ÿ\s]{1,60}$/;
+    
+    if(!expNombre.test(nombreCompleto)){
+        alert("El nombre no tiene el formato correcto!");
+        e.preventDefault();
+        return;
+    }
+
+    if(edad <= 15){
+        alert("La persona es demasiado joven para realizar la solicitud!");
+        e.preventDefault();
+        return;
+    }
     const values = [email,  nombreCompleto,  fechaNacimiento, genero, gradoAcad, edad]
     try {
         Email.send({
             SecureToken : "3efe4cf1-5d33-43a0-a02f-527fa8c99262",
-            To : '',
+            To : 'cgrelectromecanica2@gmail.com',
             From : "pruebas.patrick.utn@gmail.com",
             Subject : "Información de Formulario CGR Electromecánica",
             Body : mailBody(values)
